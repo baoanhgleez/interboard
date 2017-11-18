@@ -11,11 +11,13 @@ namespace Interboard
         public int Id { get; set; }
         public string Name { get; set; }
         public List<String> Lines { get; set; }
+        public List<String> Items { get; set; }
 
         public Board(string name)
         {
             this.Name = name;
             this.Lines = new List<string>();
+            this.Items = new List<string>();
         }
 
         public bool IsEmpty()

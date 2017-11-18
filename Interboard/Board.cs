@@ -13,16 +13,17 @@ namespace Interboard
         public List<String> Lines { get; set; }
         public List<String> Items { get; set; }
 
-        public Board(string name)
+        public Board(string name, string firstLine)
         {
             this.Name = name;
             this.Lines = new List<string>();
+            Lines.Add(firstLine);
             this.Items = new List<string>();
         }
 
         public bool IsEmpty()
         {
-            return (Lines.Count==0);
+            return (Lines.Count==1);
         }
     }
 }
